@@ -5,3 +5,5 @@ d=2
 print(a)
 print(a+d*b)
 if b > a:   print("its working")
+AGE=int(input("age: "))
+print(AGE)
