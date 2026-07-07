@@ -40,16 +40,31 @@ if a>b:
 elif a<b:
         print("b is greator than a")
         """
-str="Python is a powerful and easy-to-learn programming language used for web development, data science, artificial intelligence, automation, game development, and much more. It is loved by beginners and professionals because of its simple syntax, huge community support, and wide range of libraries that make complex tasks much easier"
-print(str.replace("and","or"))
+# str="Python is a powerful and easy-to-learn programming language used for web development, data science, artificial intelligence, automation, game development, and much more. It is loved by beginners and professionals because of its simple syntax, huge community support, and wide range of libraries that make complex tasks much easier"
+# print(str.replace("and","or"))
 # print(str.endswith("l"))
 # print(str[-1:-4:-1])
 
 
 #entering name and checking its length
+"""
 print("enter your name")
 user=input("name:")
 print(len(user))
 print(user.find('a'))
-
-
+"""
+#assigning grade to student according to marks
+print("if you want to know to grade enter your marks out of hundred")
+marks=1
+marks=int(input("marks:"))
+if marks >= 100 :
+    print("marks should be less then 100") 
+    
+elif marks >= 90:
+    print("A Grade conngrats") 
+elif marks>80 and marks<90:
+    print("B Grade conngrats") 
+elif marks>70 and marks<80:
+    print("C Grade conngrats") 
+elif marks>70:
+    print("D Grade conngrats") 
