@@ -87,12 +87,12 @@ while count<=10:
     print(count**2)
     count+=1
     """
-print("give me a number to find factorial")
 # thistuple=(2,3,4,4,5,5,5)
 # for el in thistuple:
 #     if el==3:
 #         print("finded",el,'at index',thistuple.index(el))
 #     print(el)
+'''
 input=int(input("num:"))
 factorial=1
 for i in range(1,input):
@@ -102,3 +102,24 @@ for i in range(1,input):
         
     
         print("factorial",factorial)
+        '''
+'''
+def my_func(list):
+    length= len(list)
+    return length
+
+print(my_func([1,3,4,5,6,78]))
+
+'''
+def factorial(fac):
+    factorial=1
+    for i in range(1,fac):
+        print("step")
+        factorial *=fac  
+        fac-=1
+    
+    print("factorial",factorial)
+    print("factorial", fac)
+
+
+factorial(5)
