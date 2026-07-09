@@ -111,6 +111,7 @@ def my_func(list):
 print(my_func([1,3,4,5,6,78]))
 
 '''
+"""
 def factorial(fac):
     factorial=1
     for i in range(1,fac):
@@ -123,3 +124,16 @@ def factorial(fac):
 
 
 factorial(5)
+"""
+def func_covertiontousd(pkr):
+    print("working")
+    usd=int(pkr*0.0036)
+    print(usd)
+    return usd
+
+func_covertiontousd(6000)
+
+
+grade = ["C","D","A","A","B","B","A"]
+grade.sort()
+print(grade) 
