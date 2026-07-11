@@ -155,6 +155,7 @@ def sumofnumtural(n):
     
 print(sumofnumtural(10))
     """
+"""
 with open("bilal.txt", "r") as file1:
   file1=file1.read()
   new=file1.replace("java","python")
@@ -163,3 +164,18 @@ with open("bilal.txt","w") as file2:
 with open("bilal.txt", "r") as file1:
   file1=file1.read()
   print(file1)
+      """
+def checkwordline(word):
+    count=0
+    line=0
+    with open("bilal.txt", "r") as file1:
+        line1=file1.readline() 
+        linecheck=line1.count(word)
+        count+=linecheck 
+        if linecheck>0:
+            line=1
+        print("finded" ,word,"in","line",line,"for",count,"time")
+    print("letsgo")
+      
+      
+checkwordline("python")
