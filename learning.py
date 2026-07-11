@@ -123,7 +123,8 @@ def factorial(fac):
     print("factorial", fac)
 
 
-factorial(5)
+factorial(3)
+"""
 """
 def func_covertiontousd(pkr):
     print("working")
@@ -137,3 +138,28 @@ func_covertiontousd(6000)
 grade = ["C","D","A","A","B","B","A"]
 grade.sort()
 print(grade) 
+"""
+
+"""
+
+def sumofnumtural(n):
+    if(n==0):
+        return 
+    print(n)
+    sumofnumtural(n-1)
+     
+
+    
+    
+    
+    
+print(sumofnumtural(10))
+    """
+with open("bilal.txt", "r") as file1:
+  file1=file1.read()
+  new=file1.replace("java","python")
+with open("bilal.txt","w") as file2:
+    str= file2.write(new)
+with open("bilal.txt", "r") as file1:
+  file1=file1.read()
+  print(file1)
