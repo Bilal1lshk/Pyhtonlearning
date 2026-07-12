@@ -181,20 +181,32 @@ def checkwordline(word):
       
 checkwordline("python")      
 """
-class Student:
-    def __init__(self,fullname,english,urdu,math):
-        self.fullname=fullname
-        self.english=english
-        self.urdu=urdu
-        self.math=math
-        print("adding user name")
-    def hello(self,):
-            print(self.fullname)
-            math=int(self.math)
-            english=int(self.english)
-            urdu=int(self.urdu)
-            print(int((math+english+urdu)//3))
+# class Student:
+#     def __init__(self,fullname,english,urdu,math):
+#         self.fullname=fullname
+#         self.english=english
+#         self.urdu=urdu
+#         self.math=math
+#         print("adding user name")
+#     def hello(self,):
+#             print(self.fullname)
+#             math=int(self.math)
+#             english=int(self.english)
+#             urdu=int(self.urdu)
+#             print(int((math+english+urdu)//3))
             
             
-student=Student("khrwehekri3",20,30,50)
-student.hello()
+# student=Student("khrwehekri3",20,30,50)
+# student.hello()
+class Bankbilal:
+    def __init__(self,balance):
+        self.balance=balance
+        print("your blance is updated")
+    def credit(self,addition):
+        self.addition=addition
+        self.balance+=addition
+        print(self.balance)
+        
+
+bank=Bankbilal(20000)
+bank.credit(2000)
