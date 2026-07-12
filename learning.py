@@ -164,7 +164,8 @@ with open("bilal.txt","w") as file2:
 with open("bilal.txt", "r") as file1:
   file1=file1.read()
   print(file1)
-      """
+      """ 
+"""
 def checkwordline(word):
     count=0
     line=0
@@ -178,4 +179,22 @@ def checkwordline(word):
     print("letsgo")
       
       
-checkwordline("python")
+checkwordline("python")      
+"""
+class Student:
+    def __init__(self,fullname,english,urdu,math):
+        self.fullname=fullname
+        self.english=english
+        self.urdu=urdu
+        self.math=math
+        print("adding user name")
+    def hello(self,):
+            print(self.fullname)
+            math=int(self.math)
+            english=int(self.english)
+            urdu=int(self.urdu)
+            print(int((math+english+urdu)//3))
+            
+            
+student=Student("khrwehekri3",20,30,50)
+student.hello()
