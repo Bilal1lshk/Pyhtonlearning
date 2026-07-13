@@ -206,7 +206,11 @@ class Bankbilal:
         self.addition=addition
         self.balance+=addition
         print(self.balance)
-        
+    def debit(self,subtraction):
+        self.addition=subtraction
+        self.balance-=subtraction
+        print(self.balance)
 
 bank=Bankbilal(20000)
 bank.credit(2000)
+bank.debit(2000)
