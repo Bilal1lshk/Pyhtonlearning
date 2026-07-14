@@ -198,20 +198,22 @@ checkwordline("python")
             
 # student=Student("khrwehekri3",20,30,50)
 # student.hello()
-class Bankbilal:
-    def __init__(self,balance):
-        self.balance=balance
-        print("your blance is updated")
-    def credit(self,addition):
-        self.addition=addition
-        self.balance+=addition
-        print(self.balance)
-    def debit(self,subtraction):
-        self.addition=subtraction
-        self.balance-=subtraction
-        print(self.balance)
+# class Bankbilal:
+#     def __init__(self,balance):
+#         self.balance=balance
+#         print("your blance is updated")
+#     def credit(self,addition):
+#         self.addition=addition
+#         self.balance+=addition
+#         print(self.balance)
+#     def debit(self,subtraction):
+#         self.addition=subtraction
+#         self.balance-=subtraction
+#         print(self.balance)
 
-bank=Bankbilal(20000)
-del bank.credit()
-bank.credit(2000)
-bank.debit(2000)
+# bank=Bankbilal(20000)
+# del bank.credit()
+# bank.credit(2000)
+# bank.debit(2000)
+class making:
+    name="making"
