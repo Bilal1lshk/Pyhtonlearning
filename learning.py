@@ -212,5 +212,6 @@ class Bankbilal:
         print(self.balance)
 
 bank=Bankbilal(20000)
+del bank.credit()
 bank.credit(2000)
 bank.debit(2000)
