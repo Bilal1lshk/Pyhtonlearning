@@ -215,5 +215,17 @@ checkwordline("python")
 # del bank.credit()
 # bank.credit(2000)
 # bank.debit(2000)
-class making:
-    name="making"
+class makingemploye:
+    def __init__(self,name,salary,role,experience):
+        self.name=name
+        self.salary=salary
+        self.role=role
+        self.experience=experience
+    def showdetails(self):
+        print("yourname is",self.name,"your role is ",self.role)
+        
+        
+        
+data=makingemploye("bilal","120000$","FullStack Ai engineer","5 Years")
+print(data.showdetails())
+        
