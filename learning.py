@@ -232,5 +232,5 @@ checkwordline("python")
 from transformers import AutoTokenizer
 tokeized=AutoTokenizer.from_pretrained("google/gemma-3-1b-it")
 print(tokeized("bilal"))
-
-        
+from openai import OpenAi
+print("letdgo")
