@@ -34,3 +34,6 @@ def create_patient(patient: Patient):
         "message": "Patient created successfully",
         "data": patients_db[patient.id]
     }
+@app.get("/getingdata")
+def allpatient():
+    return {"message":patients_db}
