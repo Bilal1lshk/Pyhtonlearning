@@ -10,17 +10,18 @@ load_dotenv()
 
 app = FastAPI()
 
-# # Allow your Next.js frontend to call FastAPI
-# app.add_middleware(
-#     CORSMiddleware,
-#     allow_origins=[
-#         "http://localhost:3000",
-#         "https://your-leadwise-domain.com",
-#     ],
-#     allow_credentials=True,
-#     allow_methods=["*"],
-#     allow_headers=["*"],
-# )
+
+# Allow Next.js frontend to call FastAPI
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3000",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 # Gemini client
 client = genai.Client(
@@ -33,14 +34,6 @@ class ChatRequest(BaseModel):
     message: str
 
 
-# Your AI tool
-def get_weather(city: str):
-    return f"The weather in {city} is 30°C and sunny."
-
-
-tools = [get_weather]
-
-
 @app.get("/")
 def home():
     return {
@@ -51,14 +44,38 @@ def home():
 @app.post("/ai/chat")
 def chat(request: ChatRequest):
 
-    chat = client.chats.create(
+    chat_session = client.chats.create(
         model="gemini-3.6-flash",
         config={
-            "tools": tools
+            "system_instruction": """
+You are the AI assistant for LeadWise.
+
+About LeadWise:
+LeadWise is a modern CRM platform designed to help businesses manage
+their leads, sales pipeline, follow-ups, tasks, and analytics.
+
+LeadWise features include:
+- Lead management
+- Sales pipeline management
+- Follow-up management
+- Task management
+- Sales analytics
+- Dashboard for tracking business activity
+- AI-powered assistance
+
+Your role:
+- Talk to users about LeadWise.
+- Explain LeadWise features.
+- Help users understand how to use the platform.
+- Answer questions about the website and its features.
+- Be friendly, helpful, and professional.
+- Keep answers clear and reasonably short.
+- Do not claim that LeadWise has a feature if it is not mentioned above.
+"""
         }
     )
 
-    response = chat.send_message(
+    response = chat_session.send_message(
         request.message
     )
 
