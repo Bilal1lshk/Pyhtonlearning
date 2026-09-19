@@ -1,0 +1,194 @@
+ECOMLY - E-COMMERCE OPERATIONS PLATFORM
+
+Ecomly is an e-commerce operations platform designed to help online sellers manage their business from one place.
+
+The main goal of Ecomly is to reduce the number of separate tools sellers need to use every day.
+
+PRODUCT RESEARCH
+
+Ecomly allows sellers to research products before adding them to their store.
+
+A seller can save a product with its name, category, estimated cost, selling price, supplier, and research notes.
+
+For example, a seller researching a wireless keyboard may record:
+
+Product: Wireless Mechanical Keyboard
+Category: Electronics
+Estimated Cost: $35
+Selling Price: $69
+Supplier: TechSource
+
+The product research system can help sellers compare products and decide which products may be worth testing.
+
+INVENTORY MANAGEMENT
+
+Ecomly provides inventory management for products and SKUs.
+
+Every product should have a unique SKU.
+
+For example:
+
+Product: Wireless Mechanical Keyboard
+SKU: WK-100
+Stock: 50
+Low Stock Threshold: 10
+
+If the stock falls below the low-stock threshold, Ecomly should create a low-stock alert.
+
+For example, if the keyboard has 8 units remaining and its low-stock threshold is 10 units, the product should be marked as low stock.
+
+Inventory changes can happen because of sales, purchases, returns, manual adjustments, or synchronization with another sales channel.
+
+ORDER MANAGEMENT
+
+Ecomly allows sellers to manage orders from different sales channels.
+
+An order contains information such as the customer, product, quantity, sales channel, and order status.
+
+Example order:
+
+Order ID: 1001
+Customer: Ahmed Khan
+Product: Wireless Mechanical Keyboard
+SKU: WK-100
+Quantity: 2
+Channel: Shopify
+Status: Confirmed
+
+When an order is confirmed, the ordered quantity should normally be deducted from available inventory.
+
+If the product had 50 units and a confirmed order contained 2 units, the available stock would become 48 units.
+
+SUPPLIERS
+
+Ecomly stores supplier information for products.
+
+Example supplier:
+
+Supplier: TechSource
+Products: Wireless Mechanical Keyboard, Wireless Mouse
+Country: China
+Typical Lead Time: 8-12 days
+Minimum Order Quantity: 50 units
+
+Supplier lead time is important when planning inventory replenishment.
+
+A seller may need to reorder a product earlier if the supplier takes several days to deliver new stock.
+
+AI PRODUCT STUDIO
+
+Ecomly includes an AI Product Studio concept.
+
+The AI Product Studio can help sellers create product images and product content.
+
+Possible features include:
+
+- AI-generated product images
+- Background replacement
+- Product image variations
+- Product descriptions
+- Product titles
+- Marketing content
+
+The purpose of the AI Product Studio is to reduce the amount of manual work required to prepare products for an online store.
+
+STORE ANALYTICS
+
+Ecomly provides a central dashboard for store analytics.
+
+The dashboard can display:
+
+- Total revenue
+- Number of orders
+- Best-selling products
+- Current inventory
+- Low-stock products
+- Product performance
+- Sales by channel
+
+The dashboard gives sellers a central view of their business instead of requiring them to open several different applications.
+
+MULTI-CHANNEL INVENTORY SYNCHRONIZATION
+
+A future feature of Ecomly is multi-channel inventory synchronization.
+
+A seller may sell the same product on eBay, Walmart, and Shopify.
+
+For example:
+
+Product: Wireless Mouse
+SKU: MOUSE-520
+Central Stock: 20
+
+If two units are sold on eBay, Ecomly should update the central inventory:
+
+20 - 2 = 18 units
+
+The new inventory quantity can then be synchronized with the connected sales channels.
+
+The purpose of synchronization is to reduce the risk of overselling products.
+
+Synchronization should consider timestamps and the source of inventory updates.
+
+Older inventory information should not blindly overwrite newer information.
+
+TECHNOLOGY
+
+Ecomly is planned as a modern web application.
+
+The main technologies include:
+
+Frontend: Next.js
+Programming Language: TypeScript
+Database: PostgreSQL
+Containerization: Docker
+Backend APIs: FastAPI
+AI: Large Language Models and AI APIs
+
+PostgreSQL is used for structured relational data such as users, products, orders, inventory, suppliers, and organizations.
+
+Docker is used to create consistent development and deployment environments.
+
+FastAPI can be used for backend services and AI-related functionality.
+
+ECOMLY USERS
+
+Ecomly is primarily designed for e-commerce sellers and small e-commerce teams.
+
+A seller may use Ecomly to research products, manage inventory, track orders, monitor suppliers, generate product content, and analyze store performance.
+
+The platform is especially useful for sellers who operate across multiple sales channels.
+
+EXAMPLE BUSINESS
+
+A seller named Ahmed operates an online electronics store.
+
+Ahmed sells wireless keyboards, wireless mice, and USB-C hubs.
+
+He currently uses different tools for product research, inventory, orders, and analytics.
+
+Ahmed wants to use Ecomly to manage these workflows from one dashboard.
+
+Ahmed has 30 wireless keyboards in stock.
+
+The keyboard SKU is WK-100.
+
+Ahmed receives an order through Shopify for 3 keyboards.
+
+After the confirmed order, the available stock becomes:
+
+30 - 3 = 27 keyboards.
+
+The low-stock threshold is 10, so the keyboard is not currently considered low stock.
+
+Later, Ahmed sells 19 more keyboards.
+
+The remaining inventory becomes:
+
+27 - 19 = 8 keyboards.
+
+Because 8 is below the low-stock threshold of 10, Ecomly should create a low-stock alert.
+
+Ahmed can then check the supplier information and decide whether to place a new purchase order.
+
+END OF DOCUMENT

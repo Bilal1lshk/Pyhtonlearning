@@ -1,3 +1,4 @@
 from langchain_core.documents import Document
-doc=Document(page_content="This is a sample document.", metadata={"source": "sample_source"})
-print(doc)
+from langchain_community.document_loaders import TextLoader
+documents = TextLoader("text.txt", encoding="utf-8").load()
+print(documents)
