@@ -1,21 +1,26 @@
-import warnings
-warnings.filterwarnings("ignore", category=DeprecationWarning)
+# import warnings
+# warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-from langchain_community.document_loaders import (
-    TextLoader,
-    PyMuPDFLoader,
-    DirectoryLoader
-)
+# from langchain_community.document_loaders import (
+#     TextLoader,
+#     PyMuPDFLoader,
+#     DirectoryLoader
+# )
 
-loader = DirectoryLoader(
-    path="./data",
-    glob="**/*.pdf",
-    loader_cls=PyMuPDFLoader,
-    show_progress=True
-)
+# loader = DirectoryLoader(
+#     path="./data",
+#     glob="**/*.pdf",
+#     loader_cls=PyMuPDFLoader,
+#     show_progress=True
+# )
 
-pdf_docs = loader.load()
-print(f"Total PDF pages loaded: {len(pdf_docs)}")
+# pdf_docs = loader.load()
+# print(f"Total PDF pages loaded: {len(pdf_docs)}")
 
-text_docs = TextLoader("text.txt", encoding="utf-8").load()
-print(f"Text file loaded: {len(text_docs)} document(s)")
+# text_docs = TextLoader("text.txt", encoding="utf-8").load()
+# print(f"Text file loaded: {len(text_docs)} document(s)")
+from nltk.tokenize import sent_tokenize,word_tokenize
+sentences = sent_tokenize("Hello world. This is a test sentence. Let's see how it works.")
+words=word_tokenize("Hello world. This is a test sentence. it so good to have it Let's see how it works.")
+print(words)
+print(sentences)
